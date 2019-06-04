@@ -5,9 +5,6 @@
   <title>todo-list</title>
 </head>
 <body>
-  <script src="js/main.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/vue"></script>
-
   <div>
     <h1>todo-list</h1>
     <textarea cols="30" rows="10">what to do next?</textarea>
@@ -15,8 +12,17 @@
   <div>
     <button>add</button>
   </div>
-  <div>
-    <p id='list'>list</p>
+  <div id="app">
+    <p>list</p>
+    <p>{{message}}</p>
+    <ol>
+      <li v-for="day in days">
+        {{ day }}
+      </li>
+    </ol>
   </div>
+
+  <script  src="https://cdn.jsdelivr.net/npm/vue"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>
