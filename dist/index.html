@@ -6,18 +6,17 @@
 </head>
 <body>
   <div>
-    <h1>todo-list</h1>
-    <textarea cols="30" rows="10">what to do next?</textarea>
-  </div>
-  <div>
-    <button>add</button>
+    <h1>todo-list</h1> 
   </div>
   <div id="app">
+    <input type="text" v-model="newTodo">
+    <button v-on:click="add(newTodo)">add</button>
     <p>list</p>
+    <p>{{todos}}</p>
     <p>{{message}}</p>
     <ol>
-      <li v-for="day in days">
-        {{ day }}
+      <li v-for="todo in todos">
+        {{todo.content}}
       </li>
     </ol>
   </div>
