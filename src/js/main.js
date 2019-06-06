@@ -6,8 +6,11 @@ var app = new Vue({
     newTodo: ''
   },
   methods: {
-    add: function (todo) {
-      this.todos.push({content:todo, complete:false})
+    addTodo: function (todo) {
+      this.todos.push({content:todo, complete:false});
+    },
+    deleteTodo: function (todo) {
+      this.todos.splice(this.todos.indexOf(todo), 1);
     }
   }
 }) 
