@@ -1,2 +1,9 @@
-#inputBox {
-  background-color: aqua; }
+#app {
+  width: 100%;
+  padding: 1em; }
+
+.container {
+  padding: 0.5rem; }
+
+.card {
+  margin: 0.5rem; }
