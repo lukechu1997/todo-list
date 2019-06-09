@@ -3,25 +3,39 @@
 <head>
   <meta charset="UTF-8">
   <title>todo-list</title>
+  <link rel="stylesheet" href="style/main.css">
 </head>
 <body>
   <div>
     <h1>todo-list</h1> 
   </div>
-  <div id="app">
-    <input type="text" v-model="newTodo">
-    <button v-on:click="add(newTodo)">add</button>
-    <p>list</p>
-    <p>{{todos}}</p>
-    <p>{{message}}</p>
-    <ol>
-      <li v-for="todo in todos">
-        {{todo.content}}
-      </li>
-    </ol>
+  <div id="app"> 
+    <div class="container">
+      <div class="input-group mb-3">
+        <input type="date" class="form-control" v-model="newDate">
+      </div>
+      <div class="input-group mb-3">
+        <input type="text" class="form-control" placeholder="what to do next?" aria-label="Example text with button addon" aria-describedby="button-addon1" v-model="newTodo">
+      </div>
+    </div>
+    <div class="container">
+      <button type="button" class="btn btn-outline-primary" @click="addTodo(newTodo, newDate)">Add</button>
+    </div>
+    <div class="container">
+      <div class="card d-inline-flex" style="width: 18rem;" v-for="todo in todos">
+        <div class="card-body">
+          <h5 class="card-title">{{todo.content}}</h5>
+          <h6 class="card-subtitle mb-2 text-muted">{{todo.time}}</h6>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <button type="button" class="btn btn-success">Edit</button>
+          <button type="button" class="btn btn-danger" @click="deleteTodo(todo)">Delete</button>
+        </div>
+      </div>
+    </div>
   </div>
 
   <script  src="https://cdn.jsdelivr.net/npm/vue"></script>
   <script src="js/main.js"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </body>
 </html>
