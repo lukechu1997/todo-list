@@ -1,9 +1,22 @@
 #app {
-  width: 100%;
-  padding: 1em; }
+  width: 100vw;
+  height: 100vh;
+  padding: 1em;
+  display: flex; }
+  #app h1 {
+    border: solid; }
+
+#inputArea {
+  width: 30%;
+  height: 90%;
+  background-color: aqua; }
 
 .container {
   padding: 0.5rem; }
 
-.card {
-  margin: 0.5rem; }
+#cards {
+  width: 50%;
+  height: 90%;
+  flex-direction: row; }
+  #cards .card {
+    margin: 1em; }

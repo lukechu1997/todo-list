@@ -1,10 +1,27 @@
 #app {
-    width: 100%;
+    width: 100vw;
+    height: 100vh;
     padding: 1em;
+    display: flex;
+    // flex-direction: column;
+    h1 {
+        // width: 100vw;
+        border: solid;
+    }
+}
+#inputArea {
+    width: 30%;
+    height: 90%;
+    background-color: aqua;
 }
 .container {
     padding: 0.5rem;
 }
-.card {
-    margin: 0.5rem;
+#cards {
+    width: 50%;
+    height: 90%;
+    flex-direction: row;
+    .card {
+        margin: 1em;
+    }
 }
