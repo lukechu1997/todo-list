@@ -9,7 +9,7 @@
   "license": "CC BY-NC-SA 4.0",
   "devDependencies": {
     "browserify": "^13.1.0",
-    "gulp": "^3.9.1",
+    "gulp": "^4.0.2",
     "gulp-autoprefixer": "^4.0.0",
     "gulp-less": "^3.1.0",
     "gulp-pug": "^3.1.0",
